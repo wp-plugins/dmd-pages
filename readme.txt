@@ -1,5 +1,5 @@
 === dmd Pages ===
-Contributors: a.kante
+Contributors: digitalmarketingdirekt gmbh
 Donate link: https://dimadirekt.de/
 Tags: menu, ui
 Requires at least: 3.0.1
