@@ -16,7 +16,7 @@ Have you ever been frustrated when you had to edit many pages at the same time?
 Always going back to the site map or dashboard, choosing the page you want to edit etc. 
 With dmd Pages you can save those steps and can edit your pages easily. 
 dmd Pages is a simple plugin which allows you to edit your pages very fast.  
-You don’t have to go back to the dashboard (or the site map) and to select the page you want to edit anymore. 
+You do not have to go back to the dashboard (or the site map) and to select the page you want to edit anymore. 
 
 dmd Pages adds a new feature in your adminbar names FastMenu. 
 If you are on your website or on any other site of your wordpress area (design etc.), 
