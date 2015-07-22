@@ -5,7 +5,7 @@
  * Author: digitalmarketingditrekt gmbh
  * Author URI: https://dimadirekt.de/
  * Description: This plugin loads a list of all published pages into a menu in the adminbar. You can edit pages faster and don't need to search in the dashboard=>pages.
- * Version: 0.1
+ * Version: 0.2
  **/
 
 
