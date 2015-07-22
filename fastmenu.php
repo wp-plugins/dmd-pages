@@ -25,21 +25,6 @@ function dmd_enqueue_child_theme_styles() {
 		wp_enqueue_style( 'dmd-pages-css-fe' );		
 }
 
-/*
- * ### Pro Version
- */
-/*
- * Neues Menü anlegen
- */
-add_action( 'admin_menu', 'dmd_register_adminmenu' );
-function dmd_register_adminmenu() {
-    add_menu_page( 'dmd pages', 'dmd pages', 'manage_options', '/dmd-pages/admin-tpl.php', '', plugins_url( 'myplugin/images/icon.png' ));
-}
-
-/*
- * ### Pro Version Ende
- */
-
 function dmdPages() {
 	
 if ( !is_super_admin() || !is_admin_bar_showing() )
