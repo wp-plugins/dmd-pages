@@ -31,7 +31,19 @@ Try it out!
 
 == Installation ==
 
-Only install and the new menu will appear in the adminbar.
+From your WordPress dashboard
+
+1.	Visit 'Plugins > Add New'
+2.	Search for dmd Pages
+3.	Activate dmd Pages from your Plugins page. 
+4.	You will see FastMenu in your adminbar
+
+From WordPress.org
+
+1.	Download dmd Pages.
+2.	Upload the dmd Pages directory to your '/wp-content/plugins/' directory, using your favorite method (ftp, sftp, scp, etc...)
+3.	Activate dmd Pages from your Plugins page. 
+
 
 == Frequently Asked Questions ==
 
@@ -45,5 +57,8 @@ No screenshots needed.
 
 == Changelog ==
 
-= 1.0 =
+= 0.2 =
+* Some bugfixes
+
+= 0.1 =
 * Plugin published

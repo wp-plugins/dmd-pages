@@ -8,6 +8,7 @@
  * Version: 0.1
  **/
 
+
 /*
  * Load style for the adminbar menu
  */
@@ -24,36 +25,33 @@ function dmd_enqueue_child_theme_styles() {
 		wp_enqueue_style( 'dmd-pages-css-fe' );		
 }
 
+/*
+ * ### Pro Version
+ */
+/*
+ * Neues Menü anlegen
+ */
+add_action( 'admin_menu', 'dmd_register_adminmenu' );
+function dmd_register_adminmenu() {
+    add_menu_page( 'dmd pages', 'dmd pages', 'manage_options', '/dmd-pages/admin-tpl.php', '', plugins_url( 'myplugin/images/icon.png' ));
+}
+
+/*
+ * ### Pro Version Ende
+ */
 
 function dmdPages() {
 	
 if ( !is_super_admin() || !is_admin_bar_showing() )
         return;	
 	
+        global $wpdb;
 	global $wp_admin_bar;
 	
 /*
  * get all posts of post_type 'page' orderby post_title
  */
-	$args = array(
-		'posts_per_page'   => -1,
-		'offset'           => 0,
-		'category'         => '',
-		'category_name'    => '',
-		'orderby'          => 'post_title',
-		'order'            => 'ASC',
-		'include'          => '',
-		'exclude'          => '',
-		'meta_key'         => '',
-		'meta_value'       => '',
-		'post_type'        => 'page',
-		'post_mime_type'   => '',
-		'post_parent'      => '',
-		'author'	   => '',
-		'post_status'      => 'publish',
-		'suppress_filters' => true 
-	);
-	$posts_array = get_posts( $args ); 
+        $results = $wpdb->get_results( 'SELECT * FROM '.$wpdb->prefix.'posts WHERE post_status="publish" AND post_type="page" ORDER BY post_title ASC', OBJECT );  
 	
 /*
  * Create new menu in adminbar 
@@ -66,8 +64,7 @@ if ( !is_super_admin() || !is_admin_bar_showing() )
 /*
  * Create submenu in the adminbar
  */	
-	foreach ($posts_array as $post){
-		
+	foreach ($results as $post){
 		$site = admin_url();
 		$url = $site.'post.php?post='.$post->ID.'&action=edit';
 
