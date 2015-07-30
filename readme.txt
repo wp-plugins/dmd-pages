@@ -53,7 +53,8 @@ Yes.
 
 == Screenshots ==
 
-No screenshots needed.
+1. DMD Pages in the adminbar
+
 
 == Changelog ==
 
